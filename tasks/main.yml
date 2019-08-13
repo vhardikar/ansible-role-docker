@@ -1,0 +1,4 @@
+- include_tasks: "{{ tasks }}"
+  loop: "{{ lookup('list',all_tasks) }}"
+  loop_control:
+          loop_var: tasks

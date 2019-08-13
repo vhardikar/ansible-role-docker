@@ -1,0 +1,7 @@
+- name: Install required system packages
+  apt:
+          name: "{{ item }}"
+          state: latest
+          update_cache: yes
+  loop: "{{ lookup('list',pack_list) }}"
+
